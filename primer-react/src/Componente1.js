@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import './componente1.css';
 
 function Componente1(props){
 
 let creacion=2009
+
+const [precio, setPrecio]=useState(1000)
+
+function incrementarPrecio(){
+    setPrecio(precio+100)
+}
+
+
+
 return (
     <div>
         <h1>La peli es: {props.pelicula}</h1>
@@ -15,7 +25,13 @@ return (
 
         <p>Lanzamiento:{creacion}</p>
 
-        <img src="https://64.media.tumblr.com/14f194a0d50f124149e04ace9ddb034a/53b151646c262934-f1/s500x750/54d5d563fe5d38cb6b0f4bc1402fa9c603b9308f.jpg"/>
+        <p>Precio: {precio}</p>
+        <button onClick={incrementarPrecio}> Incrementar precio</button>
+        
+
+        <img className="imagen" alt="" src="https://64.media.tumblr.com/14f194a0d50f124149e04ace9ddb034a/53b151646c262934-f1/s500x750/54d5d563fe5d38cb6b0f4bc1402fa9c603b9308f.jpg"/>
+        
+        
     </div>
 )
 }

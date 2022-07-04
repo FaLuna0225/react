@@ -1,9 +1,17 @@
+import { useState } from "react"
+
 function Componente2(props){
 
     let creacion=2010
+
+    const [precio, setPrecio]=useState(1500)
+
+    function incrementarPrecio(){
+    setPrecio(precio+100)
+}
     return (
         <div>
-            <h1>La peli es:{props.pelicula}</h1>
+            <h1>La peli es: {props.pelicula}</h1>
 
             <p>
                 Grown Ups conocida como Niños grandes en España y Son como niños en Hispanoamérica, 
@@ -16,7 +24,11 @@ function Componente2(props){
             </p>
             
             <p>Lanzamiento:{creacion}</p>
-            <img src="https://tvazteca.brightspotcdn.com/90/4d/7a080db04165a99c6b9f4bf2525b/son-como-ninos.jpg"/>
+
+            <p>Precio: {precio}</p>
+            <button onClick={incrementarPrecio}> Incrementar precio</button>
+
+            <img  alt="" src="https://tvazteca.brightspotcdn.com/90/4d/7a080db04165a99c6b9f4bf2525b/son-como-ninos.jpg"/>
         </div>
     )
     }

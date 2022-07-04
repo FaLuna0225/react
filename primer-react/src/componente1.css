@@ -1,0 +1,26 @@
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 10cm;
+}
+
+h1{
+    color: #f4a261;
+}
+
+button{
+    margin-bottom: 10px;
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    height: 1cm;
+    border-radius: 5px;
+}
+
+p{
+    color: #264653;
+}
